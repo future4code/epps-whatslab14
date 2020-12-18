@@ -17,9 +17,6 @@ const DivMain = styled.div`
   background-image: url("https://img.icons8.com/doodle/48/000000/facebook-like.png");
 `
 
-{/* <img src="https://img.icons8.com/flat_round/64/000000/read-message.png"/> */}
-
-
 const UserName = styled.input`
     width: 30%;
     height: 30px;
@@ -41,9 +38,9 @@ export default class Footer extends React.Component {
         nomeUsuario: 'eu',
         novaMensagem: '',
         arrayMensagens: [
-            { usuario: 'Carol', mensagem: 'Oie' },
-            { usuario: 'Yuri', mensagem: 'Oi, tudo bem?' },
-            { usuario: 'Caio', mensagem: 'Bom dia pessoal' }
+            { usuario: <strong>Carol</strong>, mensagem: 'Oie' },
+            { usuario: <strong>Yuri</strong>, mensagem: 'Oi, tudo bem?' },
+            { usuario: <strong>Caio</strong>, mensagem: 'Bom dia pessoal' }
         ]
     }
 
