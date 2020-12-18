@@ -28,7 +28,7 @@ export default class Footer extends React.Component {
             <div>
                 <DivMsg>
                     <p>{this.props.usuario}: {this.props.mensagem}</p>
-                <BotaoDeletar onClick={this.props.DeletarMensagem}>Deletar mensagem</BotaoDeletar>
+                <BotaoDeletar onClick={this.props.DeletarMensagem}>Deletar</BotaoDeletar>
                 </DivMsg>
             </div>
         )
