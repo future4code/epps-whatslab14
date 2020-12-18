@@ -4,7 +4,7 @@ import React from 'react'
 const DivMsg = styled.div`
     display: flex;
     background-color: lightgrey;
-
+    margin: 2px 0px;
 `
 
 export default class Footer extends React.Component {
