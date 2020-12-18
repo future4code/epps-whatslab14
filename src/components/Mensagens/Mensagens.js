@@ -6,7 +6,8 @@ const DivMsg = styled.div`
     flex-direction: ${props => props.usuario === 'eu' ? 'row-reverse' : 'rowss'};
     justify-content: space-between; 
     margin: 2px 0px;
-    background-color: white; //cor da mensagem
+    background-color: #D9A171; //cor da mensagem
+    border: 5px solid #D9A171;
 `
 
 const BotaoDeletar = styled.button`
