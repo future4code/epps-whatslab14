@@ -5,14 +5,15 @@ const DivMsg = styled.div`
     display: flex;
     flex-direction: ${props => props.usuario === 'eu' ? 'row-reverse' : 'rowss'};
     justify-content: space-between; 
-    background-color: lightgrey;
     margin: 2px 0px;
+    background-color: white; //cor da mensagem
 `
 
 const BotaoDeletar = styled.button`
-background-color: #ff4646;
+    background-color: #ff4646;
+    width: 10%;
+    height: 30px;
 `
-
 
 
 export default class Footer extends React.Component {
@@ -26,7 +27,7 @@ export default class Footer extends React.Component {
             <div>
                 <DivMsg>
                     <p>{this.props.usuario}: {this.props.mensagem}</p>
-                <BotaoDeletar onClick={this.props.DeletarMensagem}>X</BotaoDeletar>
+                <BotaoDeletar onClick={this.props.DeletarMensagem}>Deletar mensagem</BotaoDeletar>
                 </DivMsg>
             </div>
         )
