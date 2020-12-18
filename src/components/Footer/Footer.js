@@ -14,7 +14,6 @@ const DivMain = styled.div`
   margin: auto;
   margin-top: 50px;
   background-color: #0f2027; //background
-  background-image: url("https://img.icons8.com/doodle/48/000000/facebook-like.png");
 `
 
 const UserName = styled.input`
