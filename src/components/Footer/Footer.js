@@ -30,7 +30,7 @@ const ButtonSend = styled.button`
 export default class Footer extends React.Component {
 
     state = {
-        nomeUsuario: '',
+        nomeUsuario: 'eu',
         novaMensagem: '',
         arrayMensagens: [
             { usuario: 'Carol', mensagem: 'Oie' },
@@ -65,19 +65,31 @@ export default class Footer extends React.Component {
         })
     }
 
+    pressionaEnter = (e) =>{
+        if(e.key === 'Enter'){
+            this.enviarMensagem();
+        }
+    }
+
+    DeletarMensagem = () =>{
+        console.log('Excluindo todas as mensagens!');
+        this.setState({arrayMensagens: []})
+    }
+
     render() {
         const mensagensEnviadas = this.state.arrayMensagens.map(p => {
-            return (<Mensagem usuario={p.usuario} mensagem={p.mensagem}/>)
+            return (<Mensagem usuario={p.usuario} mensagem={p.mensagem} onCLick={this.DeletarMensagem}/>)
         })
 
         return (
             <div>
                 <DivMain>
-                    {mensagensEnviadas}
+                    {mensagensEnviadas }
                 </DivMain>
                 <DivContainer>
                     <UserName onChange={this.nomeUsuario} placeholder="Usuario" value={this.state.nomeUsuario} />
-                    <Message onChange={this.Mensagem} placeholder="Digite a mensagem" value={this.state.novaMensagem} />
+                    <Message onChange={this.Mensagem} placeholder="Digite a mensagem" value={this.state.novaMensagem} 
+                    onKeyDown={this.pressionaEnter} />
                     <ButtonSend onClick={this.enviarMensagem}>Enviar</ButtonSend>
                 </DivContainer>
             </div >
