@@ -12,10 +12,17 @@ const DivMain = styled.div`
   height: 90vh;
   border: 1px solid black;
   margin: auto;
+  margin-top: 50px;
+  background-color: #0f2027; //background
+  background-image: url("https://img.icons8.com/doodle/48/000000/facebook-like.png");
 `
+
+{/* <img src="https://img.icons8.com/flat_round/64/000000/read-message.png"/> */}
+
 
 const UserName = styled.input`
     width: 30%;
+    height: 30px;
 `
 
 const Message = styled.input`
@@ -24,8 +31,9 @@ const Message = styled.input`
 
 const ButtonSend = styled.button`
     width: 20%;
-`
+    background-color: white;
 
+`
 
 export default class Footer extends React.Component {
 
@@ -34,8 +42,8 @@ export default class Footer extends React.Component {
         novaMensagem: '',
         arrayMensagens: [
             { usuario: 'Carol', mensagem: 'Oie' },
-            { usuario: 'Yuri', mensagem: 'Fala cmg' },
-            { usuario: 'Caio', mensagem: 'Eu sou professor' }
+            { usuario: 'Yuri', mensagem: 'Oi, tudo bem?' },
+            { usuario: 'Caio', mensagem: 'Bom dia pessoal' }
         ]
     }
 
@@ -89,7 +97,7 @@ export default class Footer extends React.Component {
                 <DivContainer>
                     <UserName onChange={this.nomeUsuario} placeholder="Usuario" value={this.state.nomeUsuario} />
                     <Message onChange={this.Mensagem} placeholder="Digite a mensagem" value={this.state.novaMensagem} 
-                    onKeyDown={this.pressionaEnter} />
+                    onKeyDown={this.pressionaEnter}/>
                     <ButtonSend onClick={this.enviarMensagem}>Enviar</ButtonSend>
                 </DivContainer>
             </div >
